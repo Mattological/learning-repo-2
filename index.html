@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <!--note we have not directly linked any stylesheet but have instead linked through main.js-->
+
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"/>
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap" rel="stylesheet">
+    <title>Matthew Portfolio Website </title>
+  </head>
+  <body><h1></h1><p>
+   <header class="header container">
+    <nav>
+      <ul class="header__menu">
+      <li>
+        <a class='header__links' href="#about">About</a><!--remember an about with a hash sign takes you to an element with an id-->
+      </li>
+      <li><a class='header__links' href="#featured">Work</a></li>
+      <li><a class='header__links' href="#contact">Contact</a></li>
+      <li class="header__line"></li>
+      <!--the sun button gotten from Hero-icons-->
+      <li><button id='Theme-toggle' class="header__sun"><svg x mlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+      </svg>
+      </button></li>
+      <li>
+        <a href="#" class="btn header__resume">Resume</a>
+      </li>
+    
+    </ul>
+  <button class="header__bars">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" >
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+    </svg>
+
+  </button></nav>
+   </header>
+   <!--Mobile Navigation  -->
+   <div class="mobile-nav">
+    <nav>
+      <ul class="mobile-nav__menu">
+        <li> <a class='mobile-nav__link' href="#about" >About</a></li>
+        <li> <a class='mobile-nav__link' href="#featured" >Work</a></li>
+        <li> <a class='mobile-nav__link' href="#contact" >Contact</a></li>
+        <li><button id='Theme-toggle' class="mobile-nav__sun"><svg x mlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z" />
+        </svg>
+        </button></li>
+        <li> <a class='mobile-nav__btn btn' href="#about" >Resume</a></li>
+      </ul>
+    </nav>
+   </div>
+   <!-- End of Mobile Navigation -->
+     <main>
+      <section class="hero container">
+        <img  class='hero__img' src="./public/Hero-photo.jpg" alt="this is me"/>  <!--or /hero-photo.jpg since it is in the same directory  -->
+        <h2 class="hero__subtitle" >Hi i'm Matthew</h2>
+        <h1 class="hero__title" > FRONT-END <br/>WEB DEVELOPER HERE!!!</h1>
+        <p class="hero__description" >I am a <strong>passionate</strong> about Finance and economics and particularly <strong>banking, investing </strong> and the stock market </p>
+        <a  class="hero__btn btn" href="">Reach out</a>
+      </section>
+       <section id='about' class="about container section">
+        <div class="about__content">
+          <h2 class="about__title">About</h2>
+          <p class="about__description"> I am a <strong> determined</strong> individual who has gone to great lengths to learn web design and web dev online 
+            while juggling college and I am committing to doing a
+             good job for <strong>whoever believes</strong> in that struggle</p>
+          <p class="about__description"> I am eighteen years old and if you havent heard about me... don't worry, you will</p>
+          <p class="about__description">Books I love to read you'll find below, but don't worry we'll ge into the web dev a bit later</p>
+          <hr class="about__hr"/>
+          <h3 class="about__subtitle"> My Book List 2023</h3>
+          <div class="about__list-container">
+          <ul class="about__list">
+            <li class="about__point">How to Win Friends and Influence People</li>
+            <li class="about__point"> 21 Irrefutable laws of leadership</li>
+            <li class="about__point"> The Intelligent Investor by ben Graham</li>
+               </ul>
+          <ul class="about__list">
+            <li class="about__point"> Atomic Habits</li>
+            <li class="about__point"> 16 Undeniable laws of communication</li>
+            <li class="about__point"> The Mountain is You by Brianna Wiest</li>
+          </ul>
+        </div>
+        </div>
+        <!-- IF YOU WILL USE A DISPLAY OF FLEX IT'S GOOD TO USE CONTAINERS
+           FOR THE CONTENTS HENCE THE DIV ELEMENTS BEING EMPLOYED -->
+        <div>
+          <div class='about__img-wrapper'>
+          <img class="about__img lazy loading" data-src="/about.jpg" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/5120x2880" alt="images for my portfolio website that are super not relevantprofile-picture"/>
+        </div>
+        </div>
+       </section>
+      <section id="featured"  class="featured container section">
+        <h3 class="featured__subtitle">Featured project</h3>
+        <div class="featured__wrapper">
+          <h2 class="featured__title"> Mattological</h2></div><a class="featured__link" href="#">
+          <svg class="featured__link" xmlns="http://www.w3.org/2000/svg" 
+          fill="none" viewBox="0 0 24 24" 
+          stroke-width="1.5" stroke="currentColor" >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+        </svg>
+        </a>
+      <p class="=featured__description">Eres mi media naranja – You're my half orange.
+         This means that you are my other half or soulmate in English.
+          Hoy te quiero más que ayer, pero menos que mañana – 
+        I love you more than I did yesterday, but less than I will tomorrow.</p>
+        <div class="featured__info-container">
+          <div ><h3 class='featured__label'>Tech Stack</h3>
+            <ul class="featured__tech-list">
+            <li class=" featured__options">Tailwind CSS</li>
+            <li class=" featured__options">React js</li>
+            <li class=" featured__options"> Next js</li>
+            <li class=" featured__options">Stripe </li>
+            <li class=" featured__options"> Supa base</li>
+            <li class=" featured__options"> WooHoo floating man</li>
+            <li class=" featured__options"> CSS 3</li>
+          </ul></div>
+            <div>
+              <h3 class="featured__label">Project type</h1>
+                <p class="featured__info">Full stack, Jamstack</p>
+            </div>
+            <div>
+              <h3 class="featured__label">Timeline </h1>
+                <p class="featured__info">December 2022-Present</p>
+            </div>
+        </div>
+        <div class='featured__image-container'>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/lsu.png" alt="LSU  basketball" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720"/>
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 125706.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant" />
+            
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 125841.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant" />
+  
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 130640.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant" />
+  
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 125643.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant"/>
+  
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 125622.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant"/>
+  
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 125526.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant"/>
+  
+          </div>
+          <div class="featured__image-wrapper">
+            <img class='lazy loading'   data-src="/Screenshot 2023-10-27 125456.png" src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo/720" alt="images for my portfolio website that are super not relevant"/>
+          </div>
+          
+        </div>
+        
+        
+      </section>
+       <section  class="work container section">
+        <h2 class="work__title">Artworks</h2>
+        <p class="work__description">This is a collection of combinations of the internet- mostly pinterest- and my imagination and fantasy</p>
+       <div class='work__container'>
+        <!-- project one -->
+       <h3 class="work__project-title">Ariana</h3>
+       <div class="work__image-wrapper work__image1" >
+        <img class='lazy loading' src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"  alt="Ariana Grande" data-src='/ArianaGrande.png'/>
+       </div> src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"
+       <div class="work__project work__content1">
+        <h3 class="work__project-subtitle">Ariana</h3>
+        <p class="work__project-description1">This is a random ash pic of a singer I adore tho I don't really listen to her anymore, or anyone for that matter,
+          I'm musically dead but I listen to gospel for worship purposes</p>
+       <p class='work__project-description2'>Escape me?<br/>
+Never—Beloved!<br/>
+While I am I, and you are you,<br/>
+So long as the world contains us both,<br/>
+Me the loving and you the loth,<br/>
+While the one eludes, must the other pursue.<br/>
+</p>
+     <a href="#" class="btn work__project-button">Ari </a>
+       </div>
+
+       
+      <!-- project two -->
+      <h3 class="work__project-title">Fast Cars </h3>
+      <div class="work__image-wrapper work__image2">
+        <img class='lazy loading'   alt="fast cars" data-src='/Screenshot 2023-10-30 072438.png' src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"/>
+      </div>
+             <div class="work__project work__content2">
+              <h3 class="work__project-subtitle"> Fast Cars</h3>
+              <p class="work__project-description1">This is a  pic of a purple car cos that's always handy to have and cause what else am I gonna add, more chiles?</p>
+       <p class='work__project-description2'>The need for speed, the fast and the furious, racing through vice city, everywhere there's black ops, Russia vs Germany, this is literal cold war. Peace Out.
+</p>
+     <a href="#" class="btn work__project-button">fast cars</a>
+     
+             </div>
+             <!-- project tres -->
+      <h3 class="work__project-title">Halloween Pumpkins </h3>
+      <div class="work__image-wrapper work__image3">
+        <img class='lazy loading'   alt="hallo Grande" data-src='/Screenshot 2023-10-30 072349.png' src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"/>
+      </div>
+             <div class="work__project work__content3">
+              <h3 class="work__project-subtitle">Halloween Pumpkins</h3>
+              <p class="work__project-description1"> purple pumpkins with scary eyes, humble munchkins will smell the prize, subtle rumblings will spare the pride. End </p>
+       <p class='work__project-description2'>purple is the new gold to me at this point ngl. I mean it's just beautiful man honestly.<br/> Fuego. vamos. </p>
+     <a href="#" class="btn work__project-button"> Happy Halloween</a>
+  
+             </div>
+       <!-- project Quatro -->
+       <h3 class="work__project-title"> CARS: THE SEQUEL</h3>
+       <div class="work__image-wrapper work__image4" >
+        <img class='lazy loading'   alt="CARS 2" data-src='/Screenshot 2023-10-30 072306.png' src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"/>
+       </div>
+       <div class="work__project work__content4">
+        <h3 class="work__project-subtitle">CARS: THE SEQUEL</h3>
+        <p class="work__project-description1">Super cars are fun innit. Ride till you can't no more🔥🔥🔥🔥</p>
+       <p class='work__project-description2'>Fate of the furious<br/>Careful what you wish for!
+</p>
+     <a href="#" class="btn work__project-button">Furious </a>
+       </div>
+       
+       
+      <!-- project Cinco -->
+      <h3 class="work__project-title">Boring Flower  </h3>
+      <div class="work__image-wrapper work__image5">
+        <img class='lazy loading'   alt="Boring'e Flowernito" data-src='/Screenshot 2023-10-30 072142.png' src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"/>
+      </div>
+             <div class="work__project work__content5">
+              <h3 class="work__project-subtitle">Boring Flower</h3>
+              <p class="work__project-description1">This is a  pic of a purple flower in the night</p>
+       <p class='work__project-description2'>I'll give this to the love of my youth, having proving her love to be true, I will cherish my two flowers, and after our toil, watch our garden blossom</p>
+     <a href="#" class="btn work__project-button">boring flower</a>
+   
+             </div>
+             <!-- project Seis -->
+      <h3 class="work__project-title">Just Do It  </h3>
+      <div class="work__image-wrapper work__image6">
+        <img class='lazy loading'   alt="Mystery" data-src='/Screenshot 2023-10-30 072750.png' src="https://fakeimg.pl/600x400/3b16e0/2d1dc2?text=effortless&font=museo"/>
+      </div>
+             <div class="work__project work__content6">
+              <h3 class="work__project-subtitle">Just Do It</h3>
+              <p class="work__project-description1"> Unknown: 90%</p>
+       <p class='work__project-description2'>Known: only that we alive...<br/>vamos! </p>
+     <a href="#" class="btn work__project-button"> Never Stop</a>
+     
+             </div>
+             </div>
+        
+    </section>
+
+      <section id='contact' class="contact section container">
+        <h2 class='contact__title'>Get in Contact</h2>
+        <p class="contact__description"> Feel free, Especially if you interesting<br/> which I believe you are if you found yourself here<br/>
+     Find my contact details on <strong>linkedIn</strong> by pressing the button below</p>
+     <a class="contact__btn btn" target='_blank' href="https://www.linkedin.com/in/matthew-njoroge-b09584270/overlay/contact-info/">LinkedIn</a>
+     <!-- target blank opens my linkedIn in a new attribute -->
+    </section> 
+
+    </main> 
+    
+   <footer class='footer container section'>
+    <h3 class='footer__title'>~Matthew Njoroge~</h3>
+   </footer> 
+   <script type="module" src="./src/main.js"></script>
+  </body>
+</html>

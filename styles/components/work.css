@@ -1,0 +1,277 @@
+.work{
+    text-align:center;
+}
+img{
+    aspect-ratio: 1/1;
+}
+.work__title{
+    font-size: var(--size-2xl);
+    
+    color:var(--clr-light)
+
+}
+.work__description{
+    color:var(--clr-slate600);
+    max-width:60ch;
+    margin:1rem auto;
+    font-size: var(--size-sm);
+}
+.work__project-title{
+    font-size:var(--size-bs);
+    margin-bottom: 1rem;
+}
+.work__project-subtitle{
+    display:none;
+}
+.work__image-wrapper::after{
+content:'';
+background-color:rgba(79, 70, 229,0.2);
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0;
+z-index:1;
+transition: background-color 0.3s;
+
+/* in order to cover the whole image we put these dimensions. */
+/* right now the absolute is relative to the html, 
+to set have the absolute relative to what we want instead of the html,
+ define a position property set to anything other than static to the closest parent
+ i.e in this case since we are using the after pseudo class, the closest parent is the image-wrapper  */
+}
+
+.work__image-wrapper{
+    position:relative;
+}
+.work__image-wrapper:hover::after{
+    background-color:rgba(79, 70, 229,0.1);
+}
+
+/* .work__project{margin-bottom: 5rem;}
+.work__project:last-of-type{
+    margin-bottom:0;
+
+} */
+/* or  */
+.work__project:not(:last-child){
+    margin-bottom: 5rem;
+}
+.work__project-description1{
+    font-size:var(--size-sm);
+    color:var(--clr-slate600);
+    margin:1rem 0;
+
+}
+.work__project-description2{
+    font-size:var(--size-sm);
+    color:var(--clr-slate400);
+    margin-bottom:1rem;
+}
+.work__project-button{
+    font-size: var(--size-sm);
+}
+
+/* this begins the section of classes used as grid-areas in the grid-format in small media query */
+
+.work__image1{
+    grid-area: image1;
+}
+.work__image2{
+    grid-area: image2;
+}.work__image3{
+    grid-area: image3;
+}.work__image4{
+    grid-area: image4;
+}.work__image5{
+    grid-area: image5;
+}
+.work__image6{
+    grid-area: image6;
+}
+.work__content1{
+    grid-area:content1;
+}
+.work__content2{
+    grid-area:content2;
+}.work__content3{
+    grid-area:content3;
+}.work__content4{
+    grid-area:content4;
+}.work__content5{
+    grid-area:content5;
+}.work__content6{
+    grid-area:content6;
+}
+/* xs */
+@media (min-width:475px){
+    .work__title{
+        font-size: var(--size-3xl);
+        
+    
+    }
+    .work__description{
+        
+        margin:1.5rem auto;
+        font-size: var(--size-base);
+    }
+    .work__project-title{
+        font-size:var(--size-large);
+        margin-bottom: 1.5rem;
+    }
+    .work__project-description1{
+        font-size:var(--size-base);
+        margin:1.5rem 0;
+    
+    }
+    .work__project-description2{
+        font-size:var(--size-base);
+        margin-bottom:1.5rem;
+    }
+    .work__project-button{
+        font-size: var(--size-base);
+    }
+    
+    
+}
+/* sm */
+@media (min-width:640px){
+    .work__container{
+        display:grid;
+       place-items:center; /* place-items is a shorthand for justify-items and align-items*/
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        'image1 content1'
+        'content2 image2'
+        'image3 content3'
+        'content4 image4'
+        'image5 content5'
+        'content6 image6'
+        ;
+        /* logic behind this
+        6 sets of single quotes cos we have 6 rows of projects 
+        and two items in each quote cos we have two columns */
+        /* we havent defined em yet tho, they need to be defined as classes in the html. so in the elements that wrap the images and the paragraphs */
+       
+    }
+    .work__project{
+        padding:0 1rem;
+    }
+    .work__project-title{
+        display:none;
+        /* this makes sure it doesnt show the title from this breakpoint onwards */
+    }
+    .work__project-description1{
+        font-size:var(--size-xs);
+        margin:1em 0; /* using em makes the margin relative to the font-size of the element */
+    
+    }
+    .work__project-description2{
+        font-size:var(--size-xs);
+        margin-bottom:1.5em;
+    }
+    .work__project-button{
+        font-size: var(--size-xs);
+    }
+    
+    .work__project-subtitle{
+        display:block;
+        font-size: var(--size-base);
+    }
+    .work__project:not(:last-child){
+        margin-bottom:0;
+        /* we do not need this setting when we get to the small media query */
+    }
+    
+}
+ /* medium */
+@media (min-width:768px){
+    .work__project-description1{
+        font-size:var(--size-sm);
+       
+    }
+    .work__project-description2{
+        font-size:var(--size-sm);}
+        
+    .work__project-button{
+        font-size: var(--size-sm);
+    }
+    
+    .work__project-subtitle{
+        display:block;
+        font-size: var(--size-lg);
+    }
+}
+
+
+/* large  */
+@media (min-width:1024px){
+    .work__title{
+        font-size: var(--size-4xl);
+        
+    
+    }
+    .work__description{
+        
+       
+        font-size: var(--size-lg);
+    }
+    .work__project-description1{
+        font-size:var(--size-base);
+       
+    }
+    .work__project-description2{
+        font-size:var(--size-base);}
+        
+    .work__project-button{
+        font-size: var(--size-base);
+    }
+    
+    .work__project-subtitle{
+        display:block;
+        font-size: var(--size-xl);
+    }
+    
+}
+ /* extra large */
+@media (min-width:1280px){
+    .work__title{
+        font-size: var(--size-5xl);
+        
+    
+    }
+    .work__description{
+        
+        margin:2rem auto;
+        font-size: var(--size-2xl);
+    }
+    .work__project-description1{
+        font-size:var(--size-lg);
+       
+    }
+    .work__project-description2{
+        font-size:var(--size-lg);}
+        
+    .work__project-button{
+        font-size: var(--size-lg);
+    }
+    
+    .work__project-subtitle{
+        display:block;
+        font-size: var(--size-lg);
+    }
+    .work__container{
+        width:80%;
+        margin: 0 auto;/*to center the container now that it isnt covering the full width*/
+        /* to limit the image size by limiting the container */
+    }
+}
+/* 2xl */
+@media (min-width:1536px){
+    .work__container{
+        width:70%;
+        margin: 0 auto;/*to center the container now that it isnt covering the full width*/
+        /* to limit the image size by limiting the container */
+    }
+    
+}

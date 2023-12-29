@@ -1,0 +1,74 @@
+/* reusable media queries for responsiveness
+/*extra small*/
+/*also remember these stylesheets since contained in one main.js file can share functionality like classes and variables*/
+/*remember everything outside the media queries is for screens smaller than 475px*/
+.header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding-top:2rem;
+    padding-bottom:2rem;
+    position:relative;
+    z-index:9999;
+    
+}
+.header__menu{display:none;}
+.header__bars{color:var(--clr-slate600);width:var(--size-2xl);height:var(--size-2xl);display:block;}
+
+    @media (min-width:475px){
+    .container{max-width:475px;}
+        /*with the media query min-width and container max-width havign the same value, this would ensure 
+        that the box shrinks when the viewport touches it on shrinking your browser viewport
+        so the container always remains small and fully visible for this size-range
+        do the same for all media queries*/}
+@media (min-width:640px){
+    .container{max-width:640px;}
+}
+ /*medium*/
+@media (min-width:768px){
+    .header__menu{display:flex;align-items:center;list-style:none;
+        border:1px solid red;
+    padding:0;}
+    .header__bars{display:none ;}
+    .header__links{font-size:var(--size-xs);text-decoration:none;
+    font-weight: 600px;
+    color:var(--clr-slate600);
+    letter-spacing: -0.05em;
+    transition:transform 0.3s, color 0.3s;}
+    .header__links:hover{ color:var(--clr-rose); transform:tranlsateY(5px);}
+    .header__line{
+        padding-top:1.5em ;
+        border:1px solid var(--clr-slate600)}
+    .header__sun{
+        display:block;
+    width:var(--size-base);
+    height:var(--size-base);
+    }
+    .header__resume{font-size: var(--size-xs);}
+    li{margin-right:0;
+    margin-left:2em;}
+    
+    .container{max-width:768px;}
+}
+/*large */
+@media (min-width:1024px){
+    .container{max-width:1024px;}
+    .header__links{
+        font-size:var(--size-s);}
+        .header__sun{
+            
+        width:var(--size-lg);
+        height:var(--size-lg);
+        }
+        .header__resume{font-size: var(--size-sm);}
+        
+}
+ /*extra large*/
+@media (min-width:1280px){
+    .container{max-width:1280px;}
+}
+/*2Xl*/
+@media (min-width:1536px){
+    .container{max-width:1536px;}
+    /*note this ensures going to a size larger than this wont pull apart our content no matter how large our screen is */}
+/*utility classes are for rules or components we use often for example our buttons*/

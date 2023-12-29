@@ -1,0 +1,184 @@
+
+.about{
+    display: flex;
+    gap:1rem;
+    flex-direction:column ;
+}.about__content{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+
+}
+.about__title{
+    font-size:var(--size-2xl);
+    color:var(--clr-light);
+    /* this are the defaults but we are keeping them written for readability */
+
+}
+.about__description{
+    max-width: 60ch;
+    font-size: var(--size-sm);
+    color:var(--clr-slate600);
+
+}
+.about__hr{
+    border-color:var(--clr-slate800);
+
+}
+.about__subtitle{
+    font-size: var(--size-sm);
+    color:var(--clr-slate400);
+}
+.about__list{
+    display:flex;
+    flex-direction: column;
+    gap:1em;
+    padding-left: 1em;
+    border:1px solid red;
+    list-style-type: '\1F680';
+    flex:1;
+
+    /* Search unicodes eg.'U+1F680'
+    this how to get a rocket or emoji etc as the bullets for your list elements
+    but to get em to work in CSs we need to surround em with single 
+    quotes and change the syntax eg. in this case remove '1+' and replace with a backslash (\) */
+}
+.about__point{
+    font-size:var(--size-sm);
+    color:var(--clr-slate600);
+}
+/* what if we want space between our list text and the bullets or whatever icons we use
+its actually a bit tricky cos adding margins to the list elements wont work 
+and will push the whole thing together  
+we need to call the before pseudo class on our list elements or class*/
+.about__point::before{
+    content:"-- ";  
+    color:var(--clr-light);
+    /* border: 1px solid gold; */
+    /* even tho we may not use the content property we still have to define it otherwise it wont work
+    , so just define and put an empty quote*/
+}
+.about__list-container{
+    display:flex;
+}
+/* xs */
+@media (min-width:475px){
+    .about{
+        
+        gap:1.5rem;
+       
+    }
+    .about__content{
+       
+        gap:1.5rem;
+    
+    }
+
+    .about__title{
+        font-size:var(--size-3xl);
+     
+        /* this are the defaults but we are keeping them written for readability */
+    
+    }
+    .about__description{
+       
+        font-size: var(--size-base);
+        
+    
+    }
+    
+    .about__subtitle{
+        font-size: var(--size-base);
+       
+    }
+    .about__point{
+        font-size:var(--size-base);
+        
+    }
+   
+    
+    .container{max-width:475px;}}
+    /* sm */
+@media (min-width:640px){
+    .container{max-width:640px;}
+  
+    .about__img{
+        width:26.6875rem;
+    }
+    .about__image-wrapper{
+        margin:0 auto;
+    }
+    
+
+}
+
+@media (min-width:768px){
+    .container{max-width:768px;}
+} 
+/* lg */
+@media (min-width:1024px){
+    .container{max-width:1024px;}
+    .about{
+       flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .about__title{
+        font-size:var(--size-4xl);
+     
+        /* this are the defaults but we are keeping them written for readability */
+    
+    }
+    .about__description{
+       
+        font-size: var(--size-lg);
+        
+    
+    }
+    
+    .about__subtitle{
+        font-size: var(--size-lg);
+       
+    }
+    .about__point{
+        font-size:var(--size-lg);
+        
+    }
+   
+    
+}
+/* xl */
+@media (min-width:1280px){
+    .container{max-width:1280px;}
+    .about__title{
+        font-size:var(--size-5xl);
+     
+        /* this are the defaults but we are keeping them written for readability */
+    
+    }
+    .about__description{
+       
+        font-size: var(--size-xl);
+        
+    
+    }
+    
+    .about__subtitle{
+        font-size: var(--size-xl);
+       
+    }
+    .about__point{
+        font-size:var(--size-xl);
+        
+    }
+    .about__content{gap:2rem;}
+    .about__img{
+        width: 30.75rem;
+    }
+   
+}
+
+@media (min-width:1536px){
+    .container{max-width:1536px;}
+}
