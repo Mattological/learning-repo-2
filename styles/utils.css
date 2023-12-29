@@ -59,7 +59,7 @@ padding-right:0.5rem;
 }
 .loaded{
     filter:blur(0) grayscale(0);
-    transition:0.7s ease-in-out;
+    transition:0.1s ease-in-out;
 /* used when images enter the viewport */
 }
 /*media queries for responsiveness*/
